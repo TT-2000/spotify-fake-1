@@ -1,0 +1,66 @@
+.wrapper {
+  background: rgb(30, 215, 96);
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  width: 50px;
+
+  svg {
+    font-size: var(--1-4rem);
+  }
+
+  //   &.custom {
+  //     height: 100%;
+  //     width: 100%;
+
+  //     svg {
+
+  //     }
+  //   }
+
+  &.playing {
+    svg {
+      font-size: var(--1-8rem);
+    }
+    &.big {
+      svg {
+        font-size: var(--2rem);
+      }
+    }
+  }
+
+  &:hover {
+    background: #3aea78;
+    transform: scale(1.03);
+  }
+
+  &.non_color {
+    background: white;
+  }
+
+  svg {
+    color: black;
+  }
+
+  &.big {
+    height: 58px;
+    width: 58px;
+
+    svg {
+      font-size: var(--1-8rem);
+    }
+  }
+
+  &.small {
+    height: 100%;
+    width: 100%;
+
+    svg {
+      //   margin-left: 5px;
+      font-size: 150%;
+    }
+  }
+}

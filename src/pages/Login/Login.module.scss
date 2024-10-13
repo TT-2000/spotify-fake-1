@@ -1,0 +1,35 @@
+.container-login {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 40%;
+  z-index: 9999;
+
+  .content-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    letter-spacing: 0.8px;
+    gap: 40px;
+
+    .heading-login {
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      justify-content: center;
+      align-items: center;
+    }
+
+    button {
+      height: 50px;
+      width: 200px;
+      border-radius: 100px;
+      background-color: rgb(90, 216, 90);
+      font-weight: 400;
+      cursor: pointer;
+      font-size: 15px;
+    }
+  }
+}

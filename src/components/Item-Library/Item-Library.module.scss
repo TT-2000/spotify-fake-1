@@ -1,0 +1,163 @@
+.wrapper {
+  width: 100%;
+  height: 64px;
+  padding-right: 5px;
+  padding-left: 2px;
+  cursor: pointer;
+
+  .content {
+    padding-left: 8px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+    height: 100%;
+
+    &:hover {
+      background: rgb(31, 31, 31);
+      box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+    }
+
+    &.active {
+      .title {
+        .name {
+          color: var(--cl-text-green);
+        }
+      }
+    }
+
+    .image {
+      width: 48px;
+      height: 48px;
+      overflow: hidden;
+      border-radius: 2px;
+      box-shadow: var(--box-shadow-normal);
+
+      &.artists {
+        border-radius: 50%;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .title {
+      flex: 1;
+
+      .name {
+        font-size: 0.92rem;
+        color: rgb(225, 216, 216);
+        display: block;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        line-clamp: 1;
+        visibility: visible;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        max-width: 99%;
+        letter-spacing: 0.4px;
+      }
+
+      .type {
+        margin-top: 6px;
+        font-size: var(--0-8rem);
+        color: var(--cl-text-type);
+        font-weight: 400;
+        display: flex;
+        align-items: center;
+
+        svg {
+          font-size: var(--1rem);
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .wrapper {
+    height: 45px;
+
+    .content {
+      padding-left: 4px;
+      gap: 5px;
+
+      .image {
+        width: 38px;
+        height: 38px;
+      }
+
+      .title {
+        .name {
+          font-size: var(--0-7rem);
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .wrapper {
+    &.toggleSidebar {
+      .content {
+        margin: 0 auto;
+        width: 46px;
+        padding-left: 0;
+        padding-right: 0;
+        justify-content: center;
+        border-radius: 2px;
+
+        .image {
+          width: 40px;
+
+          height: 40px;
+          overflow: hidden;
+          border-radius: 2px;
+          box-shadow: var(--box-shadow-normal);
+        }
+
+        .title {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .wrapper {
+    &.toggleSidebar {
+      .content {
+        width: 40px;
+
+        .image {
+          width: 35px;
+          height: 35px;
+        }
+
+        .title {
+          display: none;
+        }
+      }
+    }
+
+    .content {
+      .title {
+        flex: 1;
+
+        .name {
+          font-size: var(--0-7rem);
+        }
+
+        .type {
+          font-size: var(--0-6rem);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,176 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+  width: 100%;
+  height: 100%;
+}
+
+.current-song {
+  display: flex;
+  align-items: center;
+  width: 25%;
+  gap: 15px;
+
+  .image {
+    height: 55px;
+    width: 55px;
+
+    img {
+      height: 55px;
+      width: 55px;
+      border-radius: 5px;
+    }
+  }
+
+  .title {
+    h5 {
+      font-size: var(--0-8rem);
+      font-weight: 400;
+      color: var(--cl-text-white-normal);
+    }
+  }
+}
+
+.actions {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 6px;
+
+  &.disabled {
+    // .list-actions {
+    //   .playing {
+    //     &:hover {
+    //       display: none !important;
+    //       transform: none !important;
+    //     }
+    //   }
+    // }
+
+    button {
+      cursor: default !important;
+
+      &::after {
+        display: none !important;
+      }
+
+      &:hover {
+        transform: none !important;
+      }
+
+      svg {
+        color: gray !important;
+      }
+    }
+  }
+
+  .progress {
+    height: auto;
+    width: 600px;
+  }
+
+  .list-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    button {
+      background-color: transparent;
+      position: relative;
+      cursor: pointer;
+      transition: 0.2s linear;
+      &:hover {
+        svg {
+          color: white;
+        }
+      }
+
+      &.active {
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: -3px;
+          height: 4px;
+          width: 4px;
+          background-color: rgb(44, 156, 44);
+          left: 50%;
+          transform: translateX(-50%);
+          border-radius: 50%;
+        }
+
+        svg {
+          color: rgb(44, 156, 44);
+        }
+      }
+
+      svg {
+        font-size: 1.4rem;
+        color: rgb(165, 151, 151);
+      }
+    }
+
+    .repeat {
+      svg {
+        font-size: 1.3rem;
+      }
+    }
+
+    .playing {
+      transition: none;
+      &:hover {
+        transform: scale(1.09);
+      }
+      svg {
+        font-size: 2.5rem;
+        color: white;
+      }
+    }
+  }
+}
+
+.options {
+  width: 25%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+
+  button {
+    background-color: transparent;
+    cursor: pointer;
+    position: relative;
+    svg {
+      font-size: 1.4rem;
+      color: gray;
+    }
+
+    &.active {
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: -3px;
+        height: 4px;
+        width: 4px;
+        background-color: rgb(44, 156, 44);
+        left: 50%;
+        transform: translateX(-50%);
+        border-radius: 50%;
+      }
+
+      svg {
+        color: rgb(44, 156, 44);
+      }
+    }
+
+    &.disabled {
+      cursor: default;
+      svg {
+        color: rgb(64, 58, 58);
+      }
+    }
+  }
+}

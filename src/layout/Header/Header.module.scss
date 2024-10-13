@@ -1,0 +1,111 @@
+.wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 20px;
+  letter-spacing: 10px;
+  .logo {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 50px;
+    cursor: pointer;
+    svg {
+      color: white;
+      font-size: var(--2-4rem);
+    }
+  }
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  gap: 10px;
+
+  .button-home {
+    height: 50px;
+    width: 50px;
+    background-color: rgb(31, 31, 31);
+    display: inline-block;
+    border-radius: 50%;
+    transition: 0.1s linear;
+    cursor: pointer;
+    transition: 0.1s linear;
+
+    &.active {
+      svg {
+        color: white;
+      }
+    }
+
+    &:hover {
+      transform: scale(1.04);
+    }
+
+    svg {
+      color: rgb(205, 193, 193);
+      font-size: var(--1-8rem);
+    }
+  }
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  .bell {
+    height: 46px;
+    width: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    &:hover {
+      svg {
+        color: white;
+      }
+    }
+    svg {
+      font-size: var(--1-2rem);
+      color: gray;
+    }
+  }
+  .button-user {
+    height: 46px;
+    width: 46px;
+    border-radius: 50%;
+    background-color: #1f1f1f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    &:hover {
+      transform: scale(1.04);
+    }
+
+    img {
+      border-radius: 50%;
+      width: 100%;
+      height: 100%;
+      padding: 6px;
+      object-fit: cover;
+    }
+
+    .image-custom {
+      width: 70%;
+      height: 70%;
+      background-color: rgb(218, 128, 38);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: var(--0-8rem);
+      font-weight: 600;
+    }
+  }
+}

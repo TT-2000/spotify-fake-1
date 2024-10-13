@@ -1,0 +1,17 @@
+.title {
+  width: 100%;
+  //   overflow: hidden;
+}
+
+h4 {
+  width: auto;
+  display: inline-block;
+  font-weight: 900;
+  color: var(--cl-text-white-normal);
+}
+
+@media screen and (max-width: 1300px) {
+  h4 {
+    font-size: 2.2vw !important;
+  }
+}

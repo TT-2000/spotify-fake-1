@@ -1,0 +1,128 @@
+.wrapper {
+  width: 100%;
+  margin-top: 60px;
+
+  .heading-option {
+    display: flex;
+    justify-content: space-between;
+
+    h2 {
+      color: var(--cl-text-white-normal);
+      font-size: var(--1-6rem);
+      font-weight: 600;
+    }
+
+    .options {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+
+      .content_popper {
+        background: var(--bg-popper);
+        padding: 4px;
+        border-radius: 4px;
+
+        li {
+          display: flex;
+          align-items: center;
+          gap: 20px;
+          justify-content: space-between;
+          height: 45px;
+          width: 100%;
+          color: var(--cl-popper-item);
+          font-size: var(--0-8rem);
+          padding: 10px;
+          letter-spacing: 0.5px;
+          border-radius: 2px;
+          cursor: default;
+          transition: 0.1s linear;
+
+          svg {
+            font-size: var(--1-3rem);
+          }
+
+          &:hover {
+            background-color: var(--bg-popper-item-hover);
+          }
+
+          &.active {
+            color: var(--cl-popper-active);
+          }
+        }
+      }
+
+      .format__type {
+        display: flex;
+        align-items: flex-end;
+        gap: 4px;
+        cursor: pointer;
+
+        span {
+          font-weight: 400;
+          color: var(--cl-text-gray);
+          font-size: var(--0-9rem);
+        }
+
+        svg {
+          font-size: var(--1-1rem);
+          color: var(--cl-text-gray);
+        }
+
+        &:hover {
+          span {
+            color: var(--cl-text-white-normal);
+          }
+
+          svg {
+            color: var(--cl-text-white-normal);
+          }
+        }
+      }
+
+      .format__layout-column,
+      .format__layout-row {
+        cursor: pointer;
+        height: 36px;
+        width: 36px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        svg {
+          color: var(--cl-text-gray);
+          font-size: var(--1-2rem);
+        }
+
+        &:hover {
+          background: hsla(0, 0%, 100%, 0.1);
+          svg {
+            color: var(--cl-text-white-normal);
+          }
+        }
+
+        &.active {
+          background: hsla(0, 0%, 100%, 0.1);
+          svg {
+            color: var(--cl-text-white-normal);
+          }
+        }
+      }
+
+      .format__layout-column {
+        svg {
+          font-size: var(--1-3rem);
+        }
+      }
+    }
+  }
+
+  .content {
+    // margin-top: 1px;
+    width: 100%;
+  }
+}
+
+.wrapper-layout {
+  margin-top: 20px;
+}

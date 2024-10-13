@@ -1,0 +1,13 @@
+.wrapper {
+  width: 100%;
+
+  .container {
+    position: relative;
+    z-index: 999;
+  }
+
+  .recommendation-tracks,
+  .recommendation-playlist {
+    margin-top: 50px;
+  }
+}

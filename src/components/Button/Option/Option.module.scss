@@ -1,0 +1,15 @@
+.wrapper {
+  svg {
+    font-size: var(--2-5rem);
+    color: var(--cl-text-gray-light);
+    transition: 0.1s linear;
+    display: flex;
+    align-items: center;
+  }
+  &:hover {
+    svg {
+      color: white;
+      transform: scale(1.09);
+    }
+  }
+}

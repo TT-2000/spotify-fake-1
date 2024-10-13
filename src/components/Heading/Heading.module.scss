@@ -1,0 +1,62 @@
+.wrapper-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 10px;
+
+  &.small {
+    .title {
+      h2 {
+        font-size: var(--1rem);
+      }
+    }
+  }
+
+  &.big {
+    .title {
+      h2 {
+        font-size: var(--2rem);
+        font-weight: 700;
+      }
+    }
+  }
+
+  .title {
+    display: flex;
+    flex-direction: column-reverse;
+
+    &.item {
+      p {
+        display: block;
+      }
+    }
+
+    h2 {
+      font-size: var(--1-3rem);
+      color: white;
+      font-weight: 600;
+      letter-spacing: 0.4px;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    }
+
+    p {
+      display: none;
+      font-size: var(--0-8rem);
+      color: var(--cl-text-gray-dark);
+    }
+  }
+
+  button {
+    background-color: transparent;
+    color: rgb(195, 189, 189);
+    font-size: var(--0-8rem);
+    font-weight: 600;
+    letter-spacing: 0.4px;
+    cursor: pointer;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

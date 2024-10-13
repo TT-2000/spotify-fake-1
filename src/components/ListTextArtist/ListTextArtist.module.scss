@@ -1,0 +1,48 @@
+.artists {
+  width: 100%;
+}
+
+.list {
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.8px;
+  color: var(--cl-text-artist);
+  -webkit-line-clamp: 1;
+  line-clamp: 1;
+  display: block;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+  letter-spacing: 0.3px;
+
+  .item-artist {
+    // display: flex;
+    // align-items: center;
+
+    span {
+      font-weight: 400;
+      color: var(--cl-text-artist);
+      font-size: var(--0-8rem);
+
+      cursor: pointer;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    p {
+      color: var(--cl-text-artist);
+      font-size: var(--0-8rem);
+      padding-right: 2px;
+      display: inline-block;
+    }
+
+    &:last-child {
+      p {
+        opacity: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,124 @@
+:root {
+  --bg-button: radial-gradient(#2d2929, #404046);
+  --bg-button-hover: #535356;
+  --h-item: 28px
+  --w-item: 28px
+}
+
+.action__nav {
+  width: 100%;
+  // width: 350px;
+  padding-left: 10px;
+  margin-top: 10px;
+}
+
+
+.list-item {
+  width: 100%;
+  
+.item-playlist {
+  .item {
+    position: relative;
+    z-index: 9;
+  }
+
+  .button-active {
+    height: 32px;
+    width: auto;
+    min-width: 42px;
+    border-bottom-right-radius: 100px;
+    border-top-right-radius: 100px;
+    padding-right: 10px;
+    padding-left: 56px;
+    margin-inline-start: -48px;
+    background-color: rgb(237, 220, 220);
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+
+    &:hover {
+      background-color: rgb(241, 233, 233);
+    }
+  }
+}
+
+  .item {
+    height: 32px;
+    width: auto;
+    min-width: 42px;
+    margin-right: 6px;
+    padding: 0 10px;
+    border-radius: 100px;
+    background-color: hsla(0, 0%, 100%, .1);
+    color: var(--cl-text-white-low);
+    font-size: var(--0-8rem);
+    transition: .2s linear;
+    cursor: pointer;
+    
+
+    &.active {
+      background-color: white;
+      color: black;
+
+      &:hover {
+        background-color: rgb(243, 238, 238);
+      }
+    }
+
+    &:hover {
+      background-color: hsla(0, 0%, 100%, 0.173);
+    }
+  }
+
+  .button-clear {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: hsla(0, 0%, 100%, .1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-right: 6px;
+
+    &:hover {
+      svg {
+        color: white;
+      }
+    }
+
+    svg {
+      color: rgb(164, 146, 146);
+      font-size: var(--1-4rem);
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  :root {
+    --h-item: 24px
+    --w-item: 24px
+  }
+  .item_nav {
+    span {
+      font-size: var(--0-6rem);
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .nav__type {
+    height: 22px;
+    margin-top: 18px;
+    span {
+      
+      font-size: var(--0-6rem);
+      
+    }
+  }
+  button {
+    height: 22px !important;
+    width: 22px !important;
+  }
+}
+
